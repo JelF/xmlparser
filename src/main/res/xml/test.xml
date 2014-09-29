@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+    <level1 id="123"
+        name="blah blah blah">
+        <nested level="2"/>
+        Some Text
+    </level1>
+    <level1 id="456"/>
+    <level1_extra>
+        <level2>
+            <level3>
+                We must go deeper!
+            </level3>
+        </level2>
+    </level1_extra>
+</root>

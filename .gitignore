@@ -1,0 +1,8 @@
+.idea/*
+.gradle/*
+*.sw*
+*._*
+*.pyc
+temp/*
+gen/*
+build/*
