@@ -6,7 +6,7 @@ import java.util.HashMap;
 /**
  * Created by jelf on 29.09.2014.
  */
-public class HashMapTag implements TagAcceptor {
+public class HashMapTag extends SimpleTagAcceptor {
 
     public String name;
     public HashMap<String,String> params;

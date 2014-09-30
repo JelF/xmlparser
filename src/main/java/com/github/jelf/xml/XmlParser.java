@@ -14,11 +14,11 @@ public class XmlParser {
     private XmlPullParser parser;
     private TagAcceptorFactory factory;
 
-    XmlParser(XmlPullParser parent, TagAcceptorFactory factory) {
+    public XmlParser(XmlPullParser parent, TagAcceptorFactory factory) {
         this.parser = parent;
         this.factory = factory;
     }
-    XmlParser(Context context, int id, TagAcceptorFactory factory) {
+    public XmlParser(Context context, int id, TagAcceptorFactory factory) {
         parser = context.getResources().getXml(id);
         this.factory = factory;
     }
@@ -51,9 +51,13 @@ public class XmlParser {
 
     private TagAcceptor parseTag() throws IOException, XmlPullParserException, XmlParserException {
         TagAcceptor tag = factory.getTagAcceptor(parser.getName());
+        if(tag==null) {
+            throw new XmlParserException("tag '"+parser.getName()+"' not found in factory");
+        }
         for(int i=0;i<parser.getAttributeCount();i++) {
             tag.addParam(parser.getAttributeName(i),parser.getAttributeValue(i));
         }
+        tag.paramsDone();
         return parse(tag);
     }
 }

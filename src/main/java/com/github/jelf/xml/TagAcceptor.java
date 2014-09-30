@@ -7,4 +7,6 @@ public interface TagAcceptor {
     public void addParam(String name, String value) throws XmlParserException;
     public void addNested(TagAcceptor nested) throws XmlParserException;
     public void setValue(String name) throws XmlParserException;
+
+    public void paramsDone() throws XmlParserException;
 }
