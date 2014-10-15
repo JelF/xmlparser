@@ -14,4 +14,4 @@ Usage
  There are different ways to make your own tag acceptors. First of all, you can simply implement `TagAcceptor`, but it's interface could be changed in few time.
  Better way is to extend abstract `SimpleTagAcceptor` or `TagAcceptorWithDictionaryParams`. You also can suggest another abstract classes which you found to be usefull
  <br/>
- Custom factory usage example will be somewhere
+ Custom factory usage example could be found in CustomFactoryTest
