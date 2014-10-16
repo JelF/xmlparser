@@ -285,7 +285,7 @@ class RootTagFactory implements TagAcceptorFactory {
                 return;
             }
             if(nested instanceof UserTagFactory.UserTag) {
-                users.add((User) nested);
+                users.add(((UserTagFactory.UserTag) nested).getUser());
                 return;
             }
             throw new XmlParserException("list","unknown nested tag supplied");
